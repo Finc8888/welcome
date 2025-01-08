@@ -13,10 +13,14 @@ pipeline {
             }
             steps {
                 echo 'Brief testing of backend'
+
+                withCredentials([string(credentialsId: 'server-port', variable: 'SERVER_PORT')]) {
+                    sh 'echo $SERVER_PORT'
+                }
+
                 sh '''
                     pwd
                     ls -lha
-                    docker container ls
                     echo "${SERVER_URL}"
                 '''
             }
