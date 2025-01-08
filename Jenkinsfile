@@ -16,6 +16,7 @@ pipeline {
                 sh '''
                     pwd
                     ls -lha
+                    docker container ls
                     echo "${SERVER_URL}"
                 '''
             }
