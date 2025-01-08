@@ -16,6 +16,7 @@ pipeline {
 
                 withCredentials([string(credentialsId: 'server-port', variable: 'SERVER_PORT'), 
                         string(credentialsId: 'server-host', variable: 'SERVER_HOST')]) {
+                    sh 'ssh-keyscan -P $SERVER_PORT -H $SERVER_HOST >> ~/.ssh/known_hosts'
                     sh 'echo $SERVER_PORT'
                     sh 'scp -r -P $SERVER_PORT ../welcome/css/ $SERVER_HOST:/home/vps/welcome/css'
                 }
