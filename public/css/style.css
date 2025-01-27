@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+body {
+    margin: 0;
+    font-size: 14px;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* background-color: teal; */
+    /* background-color: #7b917b; */
+    background-image: linear-gradient(#47FFFF, #FF85F9 );
+    background-position: top;
+
+    background-image: url('/img/bg1.jpg');
+    /* background-image: url('https://i.ibb.co/3rSwMQh/9634c84aee630758edb218053d8f04e7.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+pre {
+    margin: auto;
+    height: 20vh;
+    width: 20vw;
+    padding: 1rem;
+    border: 1rem dashed #2778f6;
+    background-clip: border-box;
+    background-color: yellow;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-weight: 900;
+    color:orangered;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: yellow;
+    font-family: 'Kirang Haerang', cursive;
+    margin-bottom: 0rem;
+}
+.content {
+    height: 100vh;
+    /* max-width: 450px; */
+    width: 30vw;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+}
+.discribe {
+    margin-top: 0rem;
+    font-family: 'Kirang Haerang', cursive;
+    color: white;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+header.gladys-header {
+    /* background-color: white; */
+}
+header nav {
+    height: 5vh;
+}
+.page-links {
+    margin: 0;    
+    display: flex;
+    height: 5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1rem;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.page-links li {
+    width: 70px;
+}
+.page-links li a {
+    text-decoration: none;
+    color: white;
+}
+.page-links li a:hover {
+    color: #2778f6;
+}
+.js-cookie-consent-bar {
+   display: none; 
+}
+.cookie-consent-bar {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #CACBCA;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+  color: #323739;
+  font-family: $font-h;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 298px;
+  height: 60px;
+  margin-left: calc((100% - 298px) / 2);
+  z-index: 100;
+  padding: 10px 10px 10px 12px;
+  box-sizing: border-box;
+}
+.cookie-consent-bar__text {
+  display: inline-block;
+  height: 36px;
+  width: 209px;
+  margin-top: 1px;
+  float: left;
+}
+.cookie-consent-bar__button,
+.cookie-consent-bar__link {
+  color: #323739;
+  @include keyboard-outline-a;
+}
+.cookie-consent-bar__link {
+  white-space: nowrap;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.cookie-consent-bar__button {
+  background-color: rgba(255, 255, 255, 0);
+  font-family: $font-h;
+  box-sizing: border-box;
+  width: 56px;
+  border: 1px solid #939593;
+  border-radius: 4px;
+  color: #323739;
+  font-size: 12px;
+  font-weight: bold;
+  height: 38px;
+  cursor: pointer;
+  margin: 0 0 0 3px;
+  padding: 0;
+}

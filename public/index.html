@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PLTL8QS6');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gladys App v.1</title>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLTL8QS6"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+      <header class="gladys-header">
+          <nav>
+              <ul class="page-links">
+                  <li><a href="pages/page1.html">Page1</a></li>
+                  <li><a href="pages/page2.html">Page2</a></li>
+                  <li><a href="pages/page3.html">Page3</a></li>
+                  <li><a href="pages/page4.html">Page4</a></li>
+              </ol>
+          </nav>
+      </header>
+	  <h1> Welcome... </h1>
+    <main class="content">
+      <article class="discribe">
+        <p>
+          ...to test page for chekcing display of content for used server.<br>
+          If you see this content with formatting markup - it meens: You are on right way!
+        </p>
+      </article>
+      <pre>
+        ..........／＞  フ
+        .........|  _  _ |
+        .......／` ミ＿xノ
+        ....../     |
+        ...../  ヽ   ﾉ
+        ....│  | | |
+        ／￣|   | | |
+        | (￣ヽ＿_ヽ_)__)
+        .＼二つ
+      </pre>
+    </main>
+    <span class="js-clarity-tracking" data-key="page" data-value="0"></span>
+    <div class="cookie-consent-bar js-cookie-consent-bar">
+        <div class="cookie-consent-bar__text">
+            We use cookies to enhance your learning experience.
+            <a class="cookie-consent-bar__link js-privacy-link" rel="nofollow" href="#privacy_policy">Learn More</a>
+        </div>
+        <button class="cookie-consent-bar__button js-cookie-consent-bar__button">Got It!</button>
+    </div>
+    <script src="/js/main.js"></script>
+    <script>
+            var consentBtn = document.querySelector(".js-cookie-consent-bar__button");
+            var consentBar = document.querySelector(".js-cookie-consent-bar");
+            const event = new Event("consentGranted");
+            const cookie = getCookie();
+            console.log(cookie);
+            if(Number(cookie.get('cookieConsent')) !== 1) {
+                console.log(Number(cookie.get('cookieConsent')));
+                consentBar.style.display = 'block';
+                console.log('if');
+            } else {
+                console.log('else');
+            }
+            consentBtn.addEventListener('click', function () {
+                consentBar.style.display = 'none';
+                var expDate = new Date, base = new Date(0);
+                var skew = base.getTime();
+                if (skew > 0) {  // Correction for Mac 2.x date bug
+                    expDate.setTime(expDate.getTime() - skew);
+                }
+                expDate.setTime(expDate.getTime() + 63072000000);  // 24 months from now
+                document.cookie = 'cookieConsent=1; expires=' + expDate.toGMTString();
+                window.dispatchEvent(event);
+            });
+    </script>
+
+  </body>
+  <script src="/js/clarity.js"></script>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "welcome",
+  "version": "1.0.0",
+  "description": "Welcome app",
+  "main": "public/js/main.js",
+  "repository": "git@github.com:Finc8888/welcome.git",
+  "author": "friedfox <finc8888@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.25.1",
+    "@eslint/js": "8.57.0",
+    "eslint": "7.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
