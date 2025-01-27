@@ -14,16 +14,16 @@ pipeline {
             steps {
                 echo 'Brief testing of backend'
 
-                withCredentials([string(credentialsId: 'server-port', variable: 'SERVER_PORT'), 
-                        string(credentialsId: 'server-host', variable: 'SERVER_HOST')]) {
-                    sh 'ssh-keyscan -H $SERVER_HOST >> ~/.ssh/known_hosts'
-                    sh 'echo $SERVER_PORT'
-                    sh 'scp -r -P $SERVER_PORT ../welcome/css/ $SERVER_HOST:/home/vps/welcome/css'
-                }
+                # withCredentials([string(credentialsId: 'server-port', variable: 'SERVER_PORT'), 
+                        # string(credentialsId: 'server-host', variable: 'SERVER_HOST')]) {
+                    # sh 'ssh-keyscan -H $SERVER_HOST >> ~/.ssh/known_hosts'
+                    #  sh 'scp -r -P $SERVER_PORT ../welcome/css/ $SERVER_HOST:/home/vps/welcome/css'
+                # }
 
                 sh '''
                     pwd
                     ls -lha
+                    docker container ls
                     echo "${SERVER_URL}"
                 '''
             }
