@@ -16,8 +16,8 @@ pipeline {
                                  string(credentialsId: 'SSL_KEY', variable: 'KEY_CONTENT')]) {
                     script {
                         // Use CERT_CONTENT and KEY_CONTENT to write into cert dir 
-                        writeFile file: 'deploy/cert/ssl.crt', text: CERT_CONTENT
-                        writeFile file: 'deploy/cert/ssl.key', text: KEY_CONTENT
+                        writeFile file: 'deploy/cert/ssl.crt', text: """${CERT_CONTENT}"""
+                        writeFile file: 'deploy/cert/ssl.key', text: """${KEY_CONTENT}"""
                     }
                     sh '''
                         chmod 600 deploy/cert/ssl.crt deploy/cert/ssl.key
