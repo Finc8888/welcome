@@ -20,6 +20,7 @@ pipeline {
                         writeFile file: 'deploy/cert/ssl.key', text: KEY_CONTENT
                     }
                     sh '''
+                        chmod 600 deploy/cert/ssl.crt deploy/cert/ssl.key
                         docker image build -f ./deploy/Dockerfile -t welcome .
                         docker image save -o ./deploy/welcome.tar welcome
                     '''
