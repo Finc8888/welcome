@@ -12,12 +12,14 @@ pipeline {
                 SERVER_URL = "https://cloud.gladys-ai.ru"
             }
             steps {                
-                withCredentials([string(credentialsId: 'SSL_CERT', variable: 'CERT_CONTENT'),
-                                 string(credentialsId: 'SSL_KEY', variable: 'KEY_CONTENT')]) {
+                withCredentials([
+                    file(credentialsId: 'SSL_CERT', variable: 'CERT_FILE'),
+                    file(credentialsId: 'SSL_KEY', variable: 'KEY_FILE')
+                ]) {
                     script {
-                        // Use CERT_CONTENT and KEY_CONTENT to write into cert dir 
-                        writeFile file: 'deploy/cert/ssl.crt', text: """${CERT_CONTENT}"""
-                        writeFile file: 'deploy/cert/ssl.key', text: """${KEY_CONTENT}"""
+                        // Copy the secret files to the desired location
+                        sh 'cp $CERT_FILE deploy/cert/ssl.crt'
+                        sh 'cp $KEY_FILE deploy/cert/ssl.key'
                     }
                     sh '''
                         chmod 600 deploy/cert/ssl.crt deploy/cert/ssl.key
