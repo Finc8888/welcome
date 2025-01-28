@@ -19,6 +19,10 @@ pipeline {
                         writeFile file: 'deploy/cert/ssl.crt', text: CERT_CONTENT
                         writeFile file: 'deploy/cert/ssl.key', text: KEY_CONTENT
                     }
+                    sh '''
+                        docker image build -f ./deploy/Dockerfile -t welcome .
+                        docker image save -o ./deploy/welcome.tar welcome
+                    '''
                 }
                 echo 'Brief testing of backend'
 
