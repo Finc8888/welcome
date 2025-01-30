@@ -32,6 +32,7 @@
                   <li><a href="pages/page2.html">Page2</a></li>
                   <li><a href="pages/page3.html">Page3</a></li>
                   <li><a href="pages/page4.html">Page4</a></li>
+                  <li><a href="pages/form.html">Form</a></li>
               </ol>
           </nav>
       </header>
@@ -65,6 +66,27 @@
     </div>
     <script src="/js/main.js"></script>
     <script>
+            // Array of callbacks to be executed when consent changes
+            const consentListeners = [];
+
+            /**
+            *   Called from GTM template to set callback to be executed when user consent is provided.
+            *   @param {function} Callback to execute on user consent
+            */
+            window.addConsentListenerExample = (callback) => {
+                consentListeners.push(callback);
+            };
+            
+            /**
+            *   Called when user grants/denies consent.
+            *   @param {Object} Object containing user consent settings.
+            */
+            const onConsentChange = (consent) => {
+                consentListeners.forEach((callback) => {
+                    console.log('into GTM consent Listener'); 
+                    callback(consent);
+                });
+            };
             var consentBtn = document.querySelector(".js-cookie-consent-bar__button");
             var consentBar = document.querySelector(".js-cookie-consent-bar");
             const event = new Event("consentGranted");
