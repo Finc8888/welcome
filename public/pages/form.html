@@ -254,7 +254,6 @@
                 </script>
                 <li id="emf-li-recaptcha">
                     <div id="recaptcha_placeholder" class="g-recaptcha"
-                         data-sitekey="6LcC1scqAAAAAPOsfupf3o31H3phBfjiWVgOd6V0-" style="height: 78px">
                          <!-- data-sitekey="6LdTUBgTAAAAAI3ypWnyeZindhUvdP9XgPeiAAs-" style="height: 78px"> -->
                     </div>
                 </li>
@@ -282,6 +281,21 @@
     </div>
     <img id="emf-form-shadows" src="//assets.emailmeform.com/images/themes/bottom.png?bWFzdGVy"></div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    const captchaElem = document.getElementById('recaptcha_placeholder');
+    let sitekey = captchaElem.dataset.sitekey;
+    const host = window.location.host;
+    console.log('host', host);
+    console.log('sitekey', sitekey);
+    console.log('recaptcha', captchaElem);
+    const serverkey ="6LcC1scqAAAAAPOsfupf3o31H3phBfjiWVgOd6V0";
+    if (host === 'cloud.gladys-ai.ru') {
+        captchaElem.dataset.sitekey = serverkey;
+    }
+    sitekey = captchaElem.dataset.sitekey;
+    console.log('sitekey', sitekey);
+
+</script>
 <script type="text/javascript">
   if (typeof jQuery == 'undefined') {
     document.write(unescape("%3Cscript src='https://app.emailmeform.com/builder/js/jquery-1.8.3.min.js' type='text/javascript'%3E%3C/script%3E"));
