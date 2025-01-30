@@ -7,6 +7,8 @@
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Lato&display=swap' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="https://app.emailmeform.com/builder/theme_css/4aTY786bcP4hfcs0a6"/>
+<link rel="stylesheet" href="../css/style.css">
+<title>Gladys Form</title>
 <style>
     #emf-container, #emf-container-outer #emf-form-shadows {
         box-sizing: border-box;
@@ -26,6 +28,14 @@
     return false;
   }
 </script>
+<header class="gladys-header">
+    <nav>
+        <ul class="page-links">
+            <li><a href="../index.html">Back</a></li>
+            </ol>
+    </nav>
+</header>
+<h1>Gladys Form</h1>
 <div id="emf-container-outer">
     <div id="emf-container">
         <div id="emf-logo"><a>EmailMeForm</a></div>
@@ -33,18 +43,20 @@
         <form id="emf-form" target="_self" class="topLabel" enctype="multipart/form-data"
               method="post" action="https://www.emailmeform.com/builder/form/4aTY786bcP4hfcs0a6">
             <div id="emf-form-instruction" class="emf-head-widget">
-                <div id="emf-form-title" class="emf-bold">Sample Form - Contact Form [[2254154]]</div>
-                <div id="emf-form-description">Feel free to contact us with any questions you have.</div>
+                <div id="emf-form-title" class="emf-bold">Gladys Form</div>
+                <div id="emf-form-description">Feel free to contact us with any questions you have. We answer to them in
+                    email.
+                </div>
             </div>
             <ul>
                 <li id="emf-li-0" class="emf-li-field emf-field-new_name data_container   cell_align_left">
                     <label class="emf-label-desc" for="element_0">Name</label>
                     <div class="emf-div-field"><span style="width:40%">
-<input class="validate[optional]" style="width:100%" value=""
+<input class="validate[optional]" style="width:100%" value="Test1"
        id="element_2" name="element_2" type="text"/>
 <label for="element_2" class="emf-bottom-label emf-text-center">First</label>
 </span><span style="width:40%">
-<input class="validate[optional]" style="width:100%" value=""
+<input class="validate[optional]" style="width:100%" value="Testov"
        id="element_3" name="element_3" type="text"/>
 <label for="element_3" class="emf-bottom-label emf-text-center">Last</label>
 </span></div>
@@ -55,12 +67,13 @@
                     <label class="emf-label-desc" for="element_7">Email</label>
                     <div class="emf-div-field"><input id="element_7" name="element_7"
                                                       class="validate[optional,custom[email]]"
-                                                      value="" size="30" type="text"/></div>
+                                                      value="con8@mail.ru" size="30" type="text"/></div>
                     <div class="emf-clear"></div>
                 </li>
                 <li id="emf-li-8" class="emf-li-field emf-field-text data_container  emf-li-half-width cell_align_left">
                     <label class="emf-label-desc" for="element_8">Company</label>
-                    <div class="emf-div-field"><input id="element_8" name="element_8" value="" size="30" type="text"
+                    <div class="emf-div-field"><input id="element_8" name="element_8" value="Test2" size="30"
+                                                      type="text"
 
                                                       class="validate[optional]"/></div>
                     <div class="emf-clear"></div>
@@ -70,15 +83,15 @@
                     <label class="emf-label-desc" for="element_9">Phone</label>
                     <div class="emf-div-field">
 <span>
-<input maxlength="3" value="" id="element_9_1" name="element_9[]" type="text"
+<input maxlength="3" value="444" id="element_9_1" name="element_9[]" type="text"
        class="emf-input-w30 validate[optional,custom[onlyNumber],length[3,3]]"/>
 <label for="element_9_1" class="emf-bottom-label">###</label>
 </span><span class="emf-sep">-</span><span>
-<input maxlength="3" value="" id="element_9_2" name="element_9[]" type="text"
+<input maxlength="3" value="444" id="element_9_2" name="element_9[]" type="text"
        class="emf-input-w30 validate[optional,custom[onlyNumber],length[3,3]]"/>
 <label for="element_9_2" class="emf-bottom-label">###</label>
 </span><span class="emf-sep">-</span><span>
-<input maxlength="4" value="" id="element_9_3" name="element_9[]" type="text"
+<input maxlength="4" value="4444" id="element_9_3" name="element_9[]" type="text"
        class="emf-input-w40 validate[optional,custom[onlyNumber],length[4,4]]"/>
 <label for="element_9_3" class="emf-bottom-label">####</label>
 </span></div>
@@ -87,15 +100,19 @@
                 <li id="emf-li-10" class="emf-li-field emf-field-textarea data_container   cell_align_left">
                     <label class="emf-label-desc" for="element_10">Message</label>
                     <div class="emf-div-field"><textarea id="element_10" name="element_10" style="width:99%" rows="10"
-                                                         class="validate[optional]"></textarea></div>
+                                                         class="validate[optional]">Test message #2</textarea></div>
                     <div class="emf-clear"></div>
                 </li>
                 <li id="emf-li-11" class="emf-li-field emf-field-file data_container   ">
                     <label class="emf-label-desc" for="element_11">File Upload</label>
-                    <div class="emf-div-field"><input id="element_11" name="element_11"
-                                                      onchange="EMF_jQuery(this).blur()"
-                                                      class="validate[optional,funcCall[check_file_error[null,2M]]]"
-                                                      type="file"/></div>
+                    <div class="emf-div-field"><span><a
+                            href="https://files.emailmeform.com/2370019/jUn1YHae/Afrikaans%20hunters.jpg"
+                            title="Afrikaans hunters.jpg" target='_blank'>Afrikaans hunters.jpg</a>
+<a href="javascript:void(0)"
+   class="emf-delete_file_link" onclick="delete_file('element_11', EMF_jQuery(this).parent());">Delete</a></span><input
+                            id="element_11" name="element_11" onchange="EMF_jQuery(this).blur()"
+                            temp_class="validate[optional,funcCall[check_file_error[null,2M]]]" type="file"
+                            style='display:none;' disabled/></div>
                     <div class="emf-clear"></div>
                 </li>
                 <script>
@@ -600,7 +617,7 @@
 
   var emf_cart = null;
   var emf_page_info = {current_page_index: 0, page_element_index_min: 0, page_element_index_max: 11};
-  var emf_index_to_value_map = null;
+  var emf_index_to_value_map = ["Test1 Testov", null, "Test1", "Testov", null, null, null, "con8@mail.ru", "Test2", "444-444-4444", "Test message #2", "[{\"filename\":\"Afrikaans hunters.jpg\",\"url\":\"https:\\\/\\\/files.emailmeform.com\\\/2370019\\\/jUn1YHae\\\/Afrikaans%20hunters.jpg\",\"size\":512570,\"cloud_file_id\":41989848}]"];
   var emf_form_visit_id = "4aTY786bcP4hfcs0a6";
 
   var emf_index_to_option_map = [];
